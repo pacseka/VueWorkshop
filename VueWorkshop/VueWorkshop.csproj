@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\vuecomponents\src\views\log\main.ts" />
+    <Content Remove="wwwroot\vuecomponents\src\views\user\main.ts" />
+    <Content Remove="wwwroot\vuecomponents\src\views\user\User.vue" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.4.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\log\main.ts" />
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\main.ts" />
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\User.vue" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\vuecomponents\src\components\" />
+  </ItemGroup>
+
+</Project>
