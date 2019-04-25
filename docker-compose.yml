@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  vueworkshop:
+    image: ${DOCKER_REGISTRY-}vueworkshop
+    build:
+      context: .
+      dockerfile: VueWorkshop/Dockerfile

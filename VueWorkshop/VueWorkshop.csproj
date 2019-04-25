@@ -3,28 +3,42 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\vuecomponents\src\types\rootstate.ts" />
+    <Content Remove="wwwroot\vuecomponents\src\types\user.ts" />
     <Content Remove="wwwroot\vuecomponents\src\views\log\main.ts" />
     <Content Remove="wwwroot\vuecomponents\src\views\user\main.ts" />
+    <Content Remove="wwwroot\vuecomponents\src\views\user\store\index.ts" />
+    <Content Remove="wwwroot\vuecomponents\src\views\user\store\usermodule\actions.ts" />
+    <Content Remove="wwwroot\vuecomponents\src\views\user\store\usermodule\index.ts" />
+    <Content Remove="wwwroot\vuecomponents\src\views\user\store\usermodule\mutations.ts" />
     <Content Remove="wwwroot\vuecomponents\src\views\user\User.vue" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bogus" Version="26.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.4.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\types\rootstate.ts" />
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\types\user.ts" />
     <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\log\main.ts" />
     <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\main.ts" />
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\store\index.ts" />
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\store\usermodule\actions.ts" />
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\store\usermodule\index.ts" />
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\store\usermodule\mutations.ts" />
     <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\User.vue" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\vuecomponents\src\components\" />
   </ItemGroup>

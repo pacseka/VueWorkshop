@@ -13,12 +13,17 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><router-link to="/user/1">Felhasználó</router-link></li>
-                        <li><router-link to="/">Felhasználók listája</router-link></li>
+                        <li><a href="/">Felhasználók</a></li>
+                        <li><a href="/logs">Logok</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <ul class="nav nav-tabs">
+            <li><router-link to="/">Felhasználók listája</router-link></li>
+            <li><router-link to="/user/1">Felhasználó</router-link></li>
+
+        </ul>
         <router-view />
     </div>
 </template>
