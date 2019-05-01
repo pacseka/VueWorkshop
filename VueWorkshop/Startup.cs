@@ -49,29 +49,11 @@ namespace VueWorkshop
             }
 
             app.UseStaticFiles();
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "vuecomponents", "dist", "js")),
-                RequestPath = "/js"
-            });
 
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "userdetails",
-                    template: "user/{id}",
-                    defaults: new { controller = "Home", action = "Index"}
-                    );
-
-                routes.MapRoute(
-                    name: "userlist",
-                    template: "userlist",
-                    defaults: new { controller = "Home", action = "Index" }
-                    );
-
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

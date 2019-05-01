@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build && npm run copy-built-files",
+    "copy-built-files": "cpx  dist/js/**/* ../js/ && cpx dist/css/**/* ../css/"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -22,6 +23,7 @@
     "@vue/cli-plugin-babel": "^3.6.0",
     "@vue/cli-plugin-typescript": "^3.6.0",
     "@vue/cli-service": "^3.6.0",
+    "cpx": "^1.5.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "typescript": "^3.4.3",
