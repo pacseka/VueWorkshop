@@ -2,11 +2,12 @@
     id: string;
     name: string;
     email: string;
-    city: string;
+    phoneNumber: string;
 }
 
 export interface IUserState {
     users?: IUser[];
+    selectedUser?: IUser;
     error: boolean;
     message: string;
 }

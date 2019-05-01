@@ -11,5 +11,9 @@ export const mutations: MutationTree<IUserState> = {
         state.error = true;
         state.users = undefined;
         state.message = payload;
+    },
+
+    loadSelectUser(state, payload: IUser) {
+        state.selectedUser = payload;
     }
 };

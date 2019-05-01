@@ -7,6 +7,9 @@ export const mutations = {
         state.error = true;
         state.users = undefined;
         state.message = payload;
+    },
+    loadSelectUser(state, payload) {
+        state.selectedUser = payload;
     }
 };
 //# sourceMappingURL=mutations.js.map

@@ -2,6 +2,7 @@ import { actions } from './actions';
 import { mutations } from './mutations';
 export const state = {
     users: undefined,
+    selectedUser: undefined,
     error: false,
     message: ""
 };

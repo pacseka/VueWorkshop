@@ -9,6 +9,7 @@
   <ItemGroup>
     <Content Remove="wwwroot\vuecomponents\src\types\rootstate.ts" />
     <Content Remove="wwwroot\vuecomponents\src\types\user.ts" />
+    <Content Remove="wwwroot\vuecomponents\src\utils\eventhub.ts" />
     <Content Remove="wwwroot\vuecomponents\src\views\log\main.ts" />
     <Content Remove="wwwroot\vuecomponents\src\views\user\main.ts" />
     <Content Remove="wwwroot\vuecomponents\src\views\user\store\index.ts" />
@@ -29,6 +30,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="wwwroot\vuecomponents\src\types\rootstate.ts" />
     <TypeScriptCompile Include="wwwroot\vuecomponents\src\types\user.ts" />
+    <TypeScriptCompile Include="wwwroot\vuecomponents\src\utils\eventhub.ts" />
     <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\log\main.ts" />
     <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\main.ts" />
     <TypeScriptCompile Include="wwwroot\vuecomponents\src\views\user\store\index.ts" />
@@ -40,7 +42,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\js\" />
-    <Folder Include="wwwroot\vuecomponents\src\components\" />
   </ItemGroup>
 
 </Project>

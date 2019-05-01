@@ -7,6 +7,7 @@ import { IRootState } from 'src/types/rootstate';
 
 export const state: IUserState = {
     users: undefined,
+    selectedUser: undefined,
     error: false,
     message: ""
 };
